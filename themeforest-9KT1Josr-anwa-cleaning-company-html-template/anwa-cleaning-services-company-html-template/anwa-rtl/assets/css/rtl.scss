@@ -1,0 +1,674 @@
+/*================================================
+Default CSS
+=================================================*/
+.pl-20{
+    padding: {
+        left: 0;
+        right: 20px;
+    };
+}
+.pr-20{
+    padding: {
+        left: 20px;
+        right: 0px;
+    };
+}
+
+.topbar-left-side ul li{
+    margin: {
+        left: 15px;
+        right: 0px;
+    };
+    i{
+        margin: {
+            left: 3px;
+            right: 0px;
+        };
+    }
+}
+.topbar-right-side {
+    .account {
+        margin: {
+            left: 15px;
+            right: 0;
+        };
+        i{
+            margin: {
+                left: 15px;
+                right: 0px;
+            };
+        }
+    }
+}
+
+.go-top{
+    left: 20px;
+    right: unset;
+}
+.main-nav {
+    nav {
+        .navbar-nav {
+            .nav-item {
+                a.dropdown-toggle{
+                    padding: {
+                        left: 13px;
+                        right: 0px;
+                    };
+                    i{
+                        left: 0;
+                        right: unset;
+                    }
+                }
+                .dropdown-menu{
+                    left: unset;
+                    right: 0;
+                    text-align: right;
+                    li {
+                        a{
+                            padding-right: 25px;
+                            &::before{
+                                left: unset;
+                                right: 10px;
+                            }
+                            i{
+                                right: unset !important;
+                                left: 10px !important;
+                                top: 55%;
+                                
+                            }
+                        }
+                        .dropdown-menu{
+                            right: 101%;
+                            left: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*================================================
+Index 01 Banner Area CSS
+=================================================*/
+.banner-text-area{
+    margin: {
+        left: 0;
+        right: auto;
+    };
+    h6{
+        padding: {
+            left: 0;
+            right: 45px;
+        };
+        &::before{
+            left: unset;
+            right: 0px;
+        }
+    }
+}
+.main-banner-img {
+    img{
+        right: unset;
+        left: -20px;
+    }
+}
+
+/*================================================
+Index 01 About Area CSS
+=================================================*/
+.about-1 {
+    .about-img-area{
+        margin: {
+            left: 0;
+            right: auto;
+        };
+    }
+}
+.about-text-area {
+    .about-list {
+        ul{
+            li{
+                margin: {
+                    left: 0;
+                    right: 0;
+                };
+                i{
+                    margin: {
+                        right: 0px;
+                        left: 10px;
+                    };
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Index 01 Features Area CSS
+=================================================*/
+.features-card{
+    padding: 30px 160px 25px 30px;
+    .features-icon-area{
+        left: unset;
+        right: 25px;
+    }
+}
+
+.form-select, .form-control{
+    text-align: right;
+}
+
+/*================================================
+Index 01 Portfolio Area CSS
+=================================================*/
+.portfolio-slider-area{
+    .owl-nav{
+        left: 0;
+        right: unset;
+    }
+}
+
+/*================================================
+Index 01 Testimonial Area CSS
+=================================================*/
+.testimonial-card {
+    .flaticon-right-quote{
+        right: unset;
+        left: 20px;
+    }
+    .testimonial-footer {
+        img{
+            margin: {
+                left: 15px;
+                right: 0px;
+            };
+        }
+    }
+}
+
+/*================================================
+Index 01 Pricing Area CSS
+=================================================*/
+.pricing-card {
+    .service-price-list {
+        ul {
+            li{
+                i{
+                    margin: {
+                        left: 5px;
+                        right: 0px;
+                    };
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Index 01 BLog Area CSS
+=================================================*/
+.blog-card {
+    .blog-card-img {
+        .blog-card-category{
+            left: unset;
+            right: 15px;
+        }
+    }
+}
+.blog-date {
+    ul {
+        li{
+            margin: {
+                left: 14px;
+                right: 0px;
+            };
+            &::before{
+                right: unset;
+                left: -12px;
+            }
+        }
+    }
+}
+
+/*================================================
+Index 01 Footer Area CSS
+=================================================*/
+.footer-quick-links {
+    ul {
+        li{
+            a{
+                i{
+                    margin: {
+                        left: 5px;
+                        right: 0px;
+                    };
+                }
+            }
+        }
+    }
+}
+.footer-links {
+    h3{
+        &::before{
+            left: unset;
+            right: 0;
+        }
+    }
+}
+.footer-content-card {
+    padding: {
+        left: unset;
+        right: 30px;
+    };
+    i{
+        right: 0;
+        left: unset;
+    }
+}
+.footer-logo-area {
+    .footer-social-icons {
+        span{
+            margin: {
+                left: 10px;
+                right: 0px;
+            };
+        }
+    }
+}
+
+/*================================================
+Index 02 Service Area CSS
+=================================================*/
+.service-card-2 {
+    .service-card-2-footer {
+        i{
+            margin: {
+                left: 10px;
+                right: 0px;
+            };
+        }
+    }
+}
+
+/*================================================
+Index 02 About Area CSS
+=================================================*/
+.about-img-area-2 .about-text-2{
+    right: -30px;
+    left: unset;
+}
+
+/*================================================
+Index 02 FAQ Area CSS
+=================================================*/
+.faq-img-area .about-text-2{
+    left: -30px;
+    right: unset;
+}
+
+.banner-img-area {
+    .shapes {
+        .b3-dot {
+            left: unset;
+            right: -75px;
+        }
+        .dot-circle{
+            left: 0;
+            right: unset;
+        }
+    }
+}
+.about-img-area-3{
+    &::before{
+        left: 0;
+        right: unset;
+    }
+}
+.about-img-list{
+    left: 0;
+    right: unset;
+}
+
+.features-card-3{
+    padding: {
+        left: 0px;
+        right: 90px;
+    };
+    i{
+        left: unset;
+        right: 0;
+    }
+}
+
+.service-card-3 {
+    .service-card-text-3 {
+        i{
+            left: 10px;
+            right: unset;
+        }
+    }
+}
+
+.why-we-card-3{
+    padding: {
+        left: 30px;
+        right: 100px;
+    };
+    i{
+        left: unset;
+        right: 30px;
+    }
+}
+
+.booking-3{
+    &::before{
+        left: unset;
+        right: 0;
+    }
+}
+
+/*================================================
+Uni Banner Area CSS
+=================================================*/
+.uni-banner-text ul {
+    li{
+        &:last-child{
+            &::after{
+                display: block;
+            }
+        }
+        &:first-child{
+            &::after{
+                display: none;
+            }
+        }
+    }
+}
+
+.categories ul li i{
+    margin: {
+        left: 5px;
+        right: 0px;
+    };
+}
+
+/*================================================
+Terms page Area CSS
+=================================================*/
+.terms {
+    .payment li{
+        padding: {
+            left: 0px;
+            right: 20px;
+        };
+        &::before{
+            left: unset;
+            right: 0px;
+        }
+    }
+    ul{
+        li{
+            span{
+                margin: {
+                    left: 8px;
+                    right: 0px;
+                };
+            }
+        }
+    }
+}
+
+/*================================================
+Details Page sidebar area CSS
+=================================================*/
+.recent-news-card{
+    padding: {
+        left: 0px;
+        right: 105px;
+    };
+    img{
+        left: unset;
+        right: 0px;
+    }
+}
+
+/*================================================
+Blog Detail Page area CSS
+=================================================*/
+.comment-card{
+    padding: {
+        left: 0px;
+        right: 100px;
+    };
+    img{
+        left: unset;
+        right: 0;
+    }
+}
+
+.contact-card{
+    padding: {
+        left: 30px;
+        right: 105px;
+    };
+    i{
+        left: unset;
+        right: 30px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+
+    /*================================================
+    Index 01 Banner Area CSS
+    =================================================*/
+    .main-banner-img {
+        img{
+            left: 0;
+        }
+    }
+    .banner-text-area{
+        margin-left: auto;
+    }
+    /*================================================
+    Index 01 About Area CSS
+    =================================================*/
+    .about-1{
+        .about-img-area {
+            .about-img-2{
+                text-align: right;
+            }
+        }
+    }
+
+    /*================================================
+    Index 01 Features About Area CSS
+    =================================================*/
+    .features-card{
+        padding: 30px 20px;
+        .features-icon-area{
+            right: 0;
+        }
+    }
+
+    /*================================================
+    Index 01 Blog Area CSS
+    =================================================*/
+    .blog-date {
+        ul{
+            li{
+                margin-left: 10px;
+            }
+        }
+    }
+
+    /*================================================
+    Index 02 About Area CSS
+    =================================================*/
+    .about-img-area-2 .about-text-2{
+        right: 0px;
+        left: unset;
+        bottom: 0;
+    }
+
+    /*================================================
+    Index 02 FAQ Area CSS
+    =================================================*/
+    .faq-img-area .about-text-2{
+        left: 0px;
+        right: unset;
+        bottom: 0;
+    }
+
+    /*================================================
+    Index 03 Why Choose Us Area CSS
+    =================================================*/
+    .why-we-card-3{
+        padding: {
+            left: 10px;
+            right: 80px;
+        };
+        i{
+            left: unset;
+            right: 20px;
+        }
+    }
+
+}
+@media only screen and (min-width: 576px) and (max-width: 767px){
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    /*================================================
+    Index 01 Banner Area CSS
+    =================================================*/
+    .banner-text-area{
+        padding: {
+            right: 30px;
+        };
+    }
+    .banner-text-area{
+        margin-left: auto;
+    }
+
+    /*================================================
+    Index 01 Features Area CSS
+    =================================================*/
+    .features-card{
+        padding: 30px;
+        .features-icon-area{
+            right: 0;
+        }
+    }
+
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    /*================================================
+    Index 01 Banner Area CSS
+    =================================================*/
+    .banner-text-area{
+        margin: {
+            left: auto;
+            right: auto
+        };
+    }
+    .main-banner-img img{
+        left: unset;
+    }
+
+    /*================================================
+    Index 01 About Area CSS
+    =================================================*/
+    .about-1 {
+        .about-img-area{
+            margin-left: auto;
+        }
+        .about-text-area{
+            margin-right: auto;
+        }
+    }
+
+    /*================================================
+    Index 01 Blog Area CSS
+    =================================================*/
+    .blog-date {
+        ul{
+            li{
+                margin-left: 10px;
+            }
+        }
+    }
+
+    /*================================================
+    Index 02 About Area CSS
+    =================================================*/
+    .about-img-area-2 .about-text-2{
+        right: 0px;
+        left: unset;
+        bottom: 0;
+    }
+
+    /*================================================
+    Index 02 FAQ Area CSS
+    =================================================*/
+    .faq-img-area .about-text-2{
+        left: 0px;
+        right: unset;
+        bottom: 0;
+    }
+
+    .why-we-card-3{
+        padding: {
+            left: 10px;
+            right: 80px;
+        };
+        i{
+            left: unset;
+            right: 20px;
+        }
+    }
+
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+
+}
+@media only screen and (min-width: 1550px){
+    .about-img-area-2 .about-text-2{
+        right: -60px;
+        left: unset;
+    }
+    .faq-img-area .about-text-2{
+        left: -30px;
+        right: unset;
+    }
+}
+@media only screen and (max-width: 1199px){
+    .mean-container a.meanmenu-reveal{
+        left: 0 !important;
+        right: auto !important;
+    }
+    .mobile-nav {
+        .logo{
+            left: unset;
+            right: 0px;
+        }
+    }
+    .mean-container .mean-nav ul li {
+        a{
+            text-align: right;
+        }
+        a.mean-expand{
+            width: 95%;
+            text-align: left;
+        }
+    
+    }
+    .menu-small-device {
+        left: 45px;
+        right: unset;
+    }
+}
+

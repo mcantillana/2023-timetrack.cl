@@ -1,0 +1,2607 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+:root {
+    --fontFamily: 'Poppins', sans-serif;
+    --fontFamily2: 'Open Sans', sans-serif;
+    --mainColor: #ff630e;
+    --secondColor: #2e2f46;
+    --backgroundColor: #ebebeb;
+    --transparentColor: #fcebe5;
+    --whiteColor: #ffffff;
+    --fix-whiteColor: #ffffff;
+    --fix-blackColor: #242424;
+    --blackColor: #242424;
+    --paragraphColor: #666666;
+    --fontSize: 15px;
+    --card-title-fontSize: 22px;
+    --transition: 0.5s;
+    --boxShadow:  rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: var(--whiteColor);
+}
+h1,h2,h3,h4{
+    font-family: var(--fontFamily);
+}
+h5,h6{
+    font-family: var(--fontFamily2);
+}
+a {
+    transition: var(--transition);
+    color: var(--blackColor);
+    text-decoration: none;
+    outline: 0 !important;
+
+    &:hover {
+        color: var(--mainColor);
+        text-decoration: none;
+    }
+}
+:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+p {
+    color: var(--paragraphColor);
+    font-size: var(--fontSize);
+    margin-bottom: 15px;
+    line-height: 1.8;
+    font-family: var(--fontFamily2);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.ptb-100 {
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    }
+}
+.pt-100 {
+    padding-top: 100px;
+}
+.pb-100 {
+    padding-bottom: 100px;
+}
+.ptb-70 {
+    padding: {
+        top: 70px;
+        bottom: 70px;
+    }
+}
+.pt-70 {
+    padding-top: 70px;
+}
+.pb-70 {
+    padding-bottom: 70px;
+}
+.pt-30{
+    padding-top: 0px;
+}
+.pl-20{
+    padding-left: 20px;
+}
+.pr-20{
+    padding-right: 20px;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.section-content{
+    margin-top: 10px;
+}
+.sticky {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--whiteColor) !important;
+    z-index: 99999;
+    padding: 0px ;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+.bg-f9faff{
+    background-color: #f9faff;
+}
+.bg-mainColor{
+    background-color: var(--mainColor);
+}
+.bg-000000{
+    background-color: #242325;
+}
+.rs{
+    margin-top: -10px
+}
+
+@import './pager-scss/header';
+
+/*=================================
+Buy Now Btn
+====================================*/
+.buy-now-btn {
+    img {
+        top: 50%;
+        left: 15px;
+        width: 15px;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+    right: 10px;
+    z-index: 99;
+    top: 50%;
+    position: fixed;
+    transform: translateY(-50%);
+    border-radius: 30px;
+    display: inline-block;
+    color: var(--whiteColor);
+    background-color: #82b440;
+    padding: 10px 15px 10px 37px;
+    box-shadow: 0 1px 10px 1px #82b440b9;
+    animation: jello 3s infinite ;
+    font-size: 12px;
+    font-weight: 600;
+    &:hover {
+        color: var(--whiteColor);
+        background-color: var(--mainColor);
+    }
+}
+
+.stars{
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-block;
+            i{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/*================================================
+Default Button Area CSS
+=================================================*/
+.default-button{
+    overflow: hidden;
+    border: 1px solid var(--secondColor);
+    padding: 12px 35px;
+    border-radius: 25px;
+    display: inline-block;
+    color: var(--fix-whiteColor);
+    background-color: var(--secondColor);
+    position: relative;
+    text-align: center;
+    font: {
+        size: 15px;
+        weight: 600;
+        family: var(--fontFamily2);
+    };
+    &::before{
+        content: '';
+        width: 100%;
+        height: 0%;
+        transition: .5s ease;
+        background-color: var(--mainColor);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+    &::after{
+        content: '';
+        width: 100%;
+        height: 0%;
+        transition: .5s ease;
+        background-color: var(--mainColor);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+    span{
+        position: relative;
+        z-index: 2;
+    }
+    &:hover{
+        color: var(--whiteColor);
+        border-color: var(--mainColor);
+        &::before, &::after{
+            height: 51%;
+        }
+    }
+}
+.default-button-2{
+    background-color: transparent;
+    color: var(--blackColor);
+    &:hover{
+        color: var(--whiteColor);
+    }
+}
+.read-more-btn{
+    font: {
+        size: var(--fontSize);
+        family: var(--fontFamily2);
+        weight: 600;
+    };
+}
+.default-button-3{
+    border-radius: 5px;
+}
+.default-button-4{
+    border-radius: 0px;
+}
+
+/*================================================
+Default Section Title Area CSS
+=================================================*/
+.default-section-title{
+    h6{
+        position: relative;
+        padding-left: 45px;
+        display: inline-block;
+        color: var(--blackColor);
+        font: {
+            size: var(--fontSize);
+            family: var(--fontFamily);
+        };
+        &::before{
+            content: '';
+            width: 40px;
+            height: 2px;
+            background-color: var(--mainColor);
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    h3{
+        line-height: 1.4;
+        color: var(--blackColor);
+        font: {
+            size: 36px;
+            weight: 700;
+        };
+    }
+}
+.default-section-title-middle{
+    text-align: center;
+    max-width: 720px;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+}
+
+/*================================================
+Index 01 About Area CSS
+=================================================*/
+.banner-text-area{
+    max-width: 745px;
+    margin-left: auto;
+    position: relative;
+    h6{
+        position: relative;
+        padding-left: 45px;
+        display: inline-block;
+        color: var(--blackColor);
+        font: {
+            size: var(--fontSize);
+            family: var(--fontFamily);
+        };
+        &::before{
+            content: '';
+            width: 40px;
+            height: 2px;
+            background-color: var(--mainColor);
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    h1{
+        line-height: 1.4;
+        color: var(--blackColor);
+        margin: {
+            top: 15px;
+            bottom: 25px
+        };
+        font: {
+            size: 60px;
+            weight: 700;
+            family: var(--fontFamily);
+        };
+    }
+    p{
+        max-width: 650px;
+        margin-bottom: 28px;
+    }
+}
+.main-banner-bg{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/banner/banner-bg1.jpg');
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #ffffff, $alpha: 0.95);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+.main-banner-img{
+    img{
+        position: relative;
+        right: -20px;
+    }
+}
+
+/*================================================
+Index 01 Partner area CSS
+=================================================*/
+.partner-slider-area{
+    img{
+        width: fit-content;
+    }
+}
+
+/*================================================
+Index 01 About Area CSS
+=================================================*/
+.about-img-area{
+    position: relative;
+    .about-img-1{
+        img{
+            position: relative;
+            transform: scale(.8);
+            transform-origin: left top;
+        }
+    }
+    .about-img-2{
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        transform: scale(.85);
+        transform-origin: right bottom;
+        img{
+            border-radius: 50%;
+        }
+        a{
+            width: 100px;
+            height: 100px;
+            font-size: 60px;
+            border-radius: 50%;
+            padding-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--whiteColor);
+            background-color: var(--mainColor);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+.about-text-area{
+    .about-list{
+        ul{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            li{
+                display: flex;
+                align-items: baseline;
+                color: var(--blackColor);
+                margin: 8px;
+                font: {
+                    size: var(--fontFamily2);
+                    weight: 400;
+                };
+                i{
+                    margin-right: 10px;
+                    color: var(--mainColor);
+                }
+            }
+        }
+    }
+    .default-button{
+        margin-top: 20px;
+    }
+}
+.about-1{
+    .about-img-area{
+        margin-left: auto;
+        max-width: 750px;
+    }
+    .about-text-area{
+        max-width: 630px;
+    }
+}
+
+.fun-facts-area{
+    margin-top: 10px;
+}
+.fun-facts-card{
+    position: relative;
+    margin-top: 30px;
+    i{
+        color: rgba($color: #555555, $alpha: 0.1);
+        position: absolute;
+        font-size: 100px;
+        top: -30px;
+    }
+    h2{
+        margin-bottom: 0px;
+        position: relative;
+        color: var(--blackColor);
+        font: {
+            size: 48px;
+            weight: 700;
+            family: var(--fontFamily);
+        };
+        sup{
+            font-weight: 500;
+            position: relative;
+            top: -12px;
+        }
+    }
+    p{
+        color: var(--blackColor);
+    }
+}
+/*================================================
+Index 01 Features Area CSS
+=================================================*/
+.features-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/shape/bg.jpg');
+    padding-bottom: 300px;
+}
+.features-card{
+    padding: 30px 30px 25px 160px;
+    box-shadow: var(--boxShadow);
+    background-color: var(--whiteColor);
+    border-radius: 15px;
+    position: relative;
+    margin-top: 30px;
+    .features-icon-area{
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .features-card-icons{
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        .shape2{
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: scale(1.5,1.5) rotate(10deg);
+            opacity: 0;
+            transition: .5s ease;
+        }
+        i{
+            font-size: 40px;
+            color: var(--fix-whiteColor);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .features-card-text{
+        h4{
+            color: var(--blackColor);
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 700;
+            };
+        }
+    }
+    &:hover{
+        .features-icon-area{
+            .shape2{
+                transform: scale(1,1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+    }
+}
+.fmt-0{
+    margin-top: 0px;
+}
+
+/*================================================
+Index 01 Booking Area CSS
+=================================================*/
+.booking-content{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/shape/shape-bg-2.png');
+    box-shadow: var(--boxShadow);
+    text-align: center;
+    position: relative;
+    margin-top: -200px;
+    border-radius: 25px;
+    padding: 40px 50px 50px;
+    .booking-form-content{
+        margin-top: 20px;
+        border-radius: 25px;
+        .form-control,.form-select{
+            padding: 15px;
+            border-radius: 25px;
+            background-color: #f9fafb;
+            border: 1px solid #eeeeee;
+            color: var(--blackColor);
+            font: {
+                size: var(--fontSize);
+                family: var(--fontFamily2);
+            };
+            &::after{
+                display: none;
+            }
+        }
+        .default-button{
+            display: block;
+            width: 100%;
+            padding: 15px;
+        }
+        .current{
+            color: var(--paragraphColor);
+        }
+    }
+}
+
+/*================================================
+Index 01 Service Area CSS
+=================================================*/
+.service-card{
+    box-shadow: var(--boxShadow);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 30px;
+    .service-card-text{
+        padding: 0px 30px 25px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../images/service/text-bg.png');
+        filter: brightness(.98);
+        transition: .5s ease;
+        .service-card-icon{
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            margin: {
+                top: -50px;
+                bottom: 15px;
+            };
+            .shape1{
+                transition: .5s ease-in-out;
+            }
+            .shape2{
+                position: absolute;
+                left: 0%;
+                top: 0;
+                z-index: 0;
+                transform: scale(1.5,1.5) rotate(10deg);
+                opacity: 0;
+                transition: .5s ease-in-out;
+            }
+            i{
+                font-size: 35px;
+                color: var(--fix-whiteColor);
+                position: absolute;
+                z-index: 2;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        h4{
+            margin-bottom: 14px;
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+        }
+    }
+    &:hover{
+        .service-card-icon{
+            .shape2{
+                transform: scale(1,1) rotate(0deg);
+                opacity: 1;
+            }
+            .shape1{
+                opacity: 0;
+            }
+        }
+        .service-card-text{
+            filter: brightness(1);
+        }
+    }
+}
+
+/*================================================
+Index 01 Portfolio Area CSS
+=================================================*/
+.portfolio-card{
+    position: relative;
+    margin-top: 30px;
+    border-radius: 25px;
+    overflow: hidden;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 0%;
+        transition: .5s ease;
+        background-image: linear-gradient(to top, #000000ef,#0000006e, #00000000, #00000000);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .portfolio-text{
+        width: 100%;
+        padding: 20px 20px 30px;
+        z-index: 9;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        transition: .5s ease;
+        transform: translateY(50px) scale(0);
+        p{
+            color: var(--mainColor);
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        h4{
+            margin-bottom: 0;
+            color: var(--fix-whiteColor);
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+            a{
+                color: var(--fix-whiteColor);
+            }
+        }
+    }
+    &:hover{
+        &::before{
+            height: 100%;
+        }
+        .portfolio-text{
+            transform: translateY(0px) scale(1);
+        }
+    }
+}
+.shape-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/shape/bg.jpg');
+}
+.portfolio-slider-area{
+    .owl-nav{
+        position: absolute;
+        top: -55px;
+        right: 0;
+        button{
+            width: 40px;
+            height: 40px;
+            margin: 0px 5px;
+            border-radius: 10px;
+            transition: .5s ease;
+            display: inline-block;
+            color: var(--blackColor) !important; 
+            border: 1px solid #858585 !important;
+            &:hover{
+                border-color: var(--mainColor) !important;
+                color: var(--fix-whiteColor) !important;
+                background-color: var(--mainColor) !important;
+            }
+        }
+    }
+}
+/*================================================
+Index 01 Testimonials Area CSS
+=================================================*/
+.stars{
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-flex;
+            align-items: center;
+            i{
+                color: #FFD31D;
+            }
+        }
+    }
+}
+.testimonial-card{
+    padding: 30px;
+    border-radius: 25px;
+    margin-top: 30px;
+    background-color: #f9fafb;
+    box-shadow: var(--boxShadow);
+    position: relative;
+    transition: .5s ease;
+    .flaticon-right-quote{
+        position: absolute;
+        right: 25px;
+        bottom: 10px;
+        font-size: 50px;
+        color: #dadada;
+        transition: .5s ease;
+        animation: top-bottom 3s infinite linear;
+    }
+    .stars{
+        margin-bottom: 15px;
+        span{
+            margin: 0px 5px;
+            color: var(--blackColor);
+            font: {
+                size: 14px;
+                weight: 600;
+            };
+        }
+    }
+    p{
+        font-size: var(--fontSize);
+        color: var(--blackColor);
+    }
+    .testimonial-footer{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        img{
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        h4{
+            margin-bottom: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--blackColor);
+        }
+        p{
+            color: var(--paragraphColor);
+            margin-bottom: 0px;
+        }
+    }
+    &:hover{
+        box-shadow: var(--boxShadow);
+        background-color: var(--whiteColor);
+        .flaticon-right-quote{
+            color: #ffd8c2;
+        }
+    }
+}
+
+/*================================================
+Index 01 Pricing Plan Area CSS
+=================================================*/
+.pricing-1{
+    position: relative;
+    &::before{
+        content: '';
+        height: 210px;
+        width: 100%;
+        background-color: var(--whiteColor);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .container{
+        position: relative;
+    }
+}
+.pricing-card{
+    background-color: var(--whiteColor);
+    border-radius: 25px;
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: var(--boxShadow);
+    transition: .5s ease;
+    .pricing-card-header{
+        background-color: var(--blackColor);
+        border-radius: 25px 25px 0px 0px;
+        padding: 30px 30px 0px 30px;
+        position: relative;
+        margin-bottom: 15px;
+        transition: .5s ease;
+        &::before{
+            content: '';
+            width: 100%;
+            height: 30px;
+            z-index: 0;
+            background-color: var(--whiteColor);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        h3{
+            margin-bottom: 20px;
+            color: var(--whiteColor);
+        }
+        .price{
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            box-shadow: var(--boxShadow);
+            background-color: var(--whiteColor);
+            position: relative;
+            transition: .5s ease;
+            color: var(--blackColor);
+            h2{
+                margin: 0px; 
+                
+                font: {
+                    size: 36px;
+                    weight: 700;
+                };
+                sup{
+                    font-size: 18px;
+                    font-weight: 400;
+                    position: relative;
+                    top: -15px;
+                }
+                sub{
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .pricing-text-area{
+        padding: 0px 30px 35px;
+    }
+    .service-price-list{
+        margin-bottom: 15px;
+        ul{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            li{
+                padding: 15px;
+                color: var(--blackColor);
+                border-bottom: 1px solid #eeeeee;
+                i{
+                    margin-right: 5px;
+                }
+                font: {
+                    size: var(--fontSize);
+                    family: var(--fontFamily2);
+                };
+                &:last-child{
+                    border-bottom: 0px;
+                }
+            }
+        }
+        .fa-check{
+            color: #02960e;
+        }
+        .fa-times{
+            color: #da0202;
+        }
+    }
+    &:hover{
+        .pricing-card-header{
+            background-color: var(--mainColor);
+            h3 {
+                color: var(--fix-whiteColor);
+            }
+            .price{
+                color: var(--mainColor);
+            }
+        }
+    }
+}
+.pricing-active{
+    .pricing-card-header{
+        background-color: var(--mainColor);
+        h3 {
+            color: var(--fix-whiteColor);
+        }
+        .price{
+            color: var(--mainColor);
+        }
+    }
+    .default-button{
+        background-color: var(--mainColor);
+        color: var(--whiteColor);
+        border-color: var(--mainColor);
+    }
+}
+
+/*================================================
+Index 01 Blog Area CSS
+=================================================*/
+.blog-card{
+    margin-top: 30px;
+    .blog-card-img{
+        position: relative;
+        transition: .5s ease;
+        overflow: hidden;
+        img{
+            border-radius: 25px;
+            transition: .5s ease;
+        }
+        .blog-card-category{
+            padding: 8px 30px;
+            border-radius: 20px;
+            transition: .5s ease;
+            display: inline-block;
+            color: var(--whiteColor);
+            transition: .5s ease;
+            background-color: var(--blackColor);
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            font: {
+                size: 15px;
+                weight: 600;
+            };
+        }
+    }
+    .blog-card-text{
+        margin-top: 25px;
+        h4{
+            color: var(--blackColor);
+            line-height: 1.4;
+            margin: {
+                top: 15px;
+                bottom: 10px
+            };
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+        }
+    }
+    &:hover{
+        .blog-card-img{
+            img{
+                transform: scale(1.1) rotate(-3deg);
+            }
+            .blog-card-category{
+                background-color: var(--mainColor);
+            }
+        }
+    }
+}
+.blog-date{
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-block;
+            margin-right: 14px;
+            position: relative;
+            color: var(--paragraphColor);
+            font: {
+                size: 14px;
+                family: var(--fontFamily2);
+            };
+            i{
+                color: var(--mainColor);
+                margin-right: 5px;
+            }
+            &::before{
+                content: '/';
+                font-size: 16px;
+                position: absolute;
+                right: -11px;
+                top: 0px;
+            }
+            &:last-child{
+                &::before{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Index 01 NewsLetter Area CSS
+=================================================*/
+.newsletter-content-area{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/news-latetr-bg.jpg');
+    padding: 50px 50px 40px;
+    border-radius: 25px;
+    position: relative;
+    .default-section-title {
+        h3{
+            margin-bottom: 0px;
+        }
+    }
+}
+.news-input-card{
+    .form-control,.form-select{
+        width: 100%;
+        padding: 15px;
+        border-radius: 25px;
+        color: var(--blackColor);
+        border: 1px solid #eeeeee;
+        background-color: var(--whiteColor);
+        &::after{
+            display: none;
+        }
+    }
+    .default-button{
+        width: 100%;
+    }
+}
+.newsletter-1{
+    position: relative;
+    &::before{
+        content: '';
+        height: 50%;
+        width: 100%;
+        background-color: #242325;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+/*================================================
+Index 01 Footer Area CSS
+=================================================*/
+@import './pager-scss/footer';
+
+
+/*================================================
+Index 02 Banner Area CSS
+=================================================*/
+.banner-text-area-2{
+    h6{
+        color: var(--mainColor);
+    }
+}
+.home-banner-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/banner/banner-2-bg.jpg');
+    overflow: hidden;
+}
+.home-banner-img{
+    text-align: center;
+    padding-top: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/banner/banner-2-circle-bg.png');
+}
+.home-banner-slider-area{
+    .owl-nav{
+        width: 88%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+        button{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            color: var(--whiteColor) !important;
+            background-color: var(--blackColor) !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+/*================================================
+Index 02 Features Area CSS
+=================================================*/
+.features-card-2{
+    .features-card-icons {
+        i{
+            left: 55%;
+            top: 60%;
+        }
+    }
+}
+
+/*================================================
+Index 02 About Area CSS
+=================================================*/
+.about-img-area-2{
+    position: relative;
+    border-radius: 0px 25% 0px 25%;
+    background-image: linear-gradient(to top, #ff6613, #fdc9ac);
+    .about-text-2{
+        position: absolute;
+        text-align: center;
+        border-radius: 0px 25% 0px 25%;
+        padding: 15px 30px;
+        background-color: var(--whiteColor);
+        border: 1px solid #cccccc;
+        display: inline-block;
+        left: -30px;
+        bottom: 20%;
+        h2{
+            color: var(--blackColor);
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*================================================
+Index 02 Services Area CSS
+=================================================*/
+.service-2{
+    justify-content: space-between;
+    align-items: center;
+}
+.service-card-2{
+    position: relative;
+    margin-top: 30px;
+    box-shadow: var(--boxShadow);
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        transform: rotateY(90deg);
+        transition: .5s ease;
+    }
+    .service-hover-text{
+        width: 100%;
+        z-index: 9;
+        padding: 15px 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .5s ease;
+        opacity: 0;
+        i{
+            font-size: 40px;
+            color: var(--mainColor);
+        }
+        h4{
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+            margin: {
+                top: 5px;
+                bottom: 10px;
+            };
+            a{
+                color: var(--fix-whiteColor);
+            }
+        }
+        p{
+            color: rgba($color: #ffffff, $alpha: 0.9);
+        }
+        .read-more-btn{
+            color: var(--mainColor);
+        }
+    }
+    .service-card-2-footer{
+        padding: 15px 25px;
+        background-color: var(--whiteColor);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        transition: .5s ease;
+        transform-origin: bottom;
+        i{
+            font-size: 25px;
+            margin-right: 10px;
+            color: var(--mainColor);
+        }
+        h4{
+            margin-bottom: 0px;
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+        }
+    }
+    &:hover{
+        &::before{
+            transform: rotateY(0deg);
+        }
+        .service-hover-text{
+            opacity: 1;
+            transition-delay: .2s;
+        }
+        .service-card-2-footer{
+            transform: rotateX(90deg);
+        }
+    }
+}
+.view-all-btn{
+    display: table;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+}
+
+/*================================================
+Index 02 Team Area CSS
+=================================================*/
+.team-card{
+    background-color: var(--whiteColor);
+    transition: .5s ease;
+    margin-top: 30px;
+    .team-text-area{
+        padding: 30px;
+        text-align: center;
+        h4{
+            margin-bottom: 8px;
+            color: var(--blackColor);
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+        }
+        p{
+            margin-bottom: 12px;
+        }
+    }
+    &:hover{
+        box-shadow: var(--boxShadow);
+        transform: translateY(-10px);
+    }
+}
+.team-social-icons{
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-block;
+            a{
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #eeeeee;
+                margin: 0px 3px;
+                &:hover{
+                    background-color: var(--mainColor);
+                    color: var(--whiteColor);
+                    border-color: var(--mainColor);
+                }
+            }
+        }
+    }
+}
+
+/*================================================
+Index 02 testimonial Area CSS
+=================================================*/
+.testimonial-card-2{
+    .testimonial-footer{
+        margin: {
+            top: 0px;
+            bottom: 20px;
+        };
+    }
+    .stars{
+        margin: {
+            top: 20px;
+            bottom: 0px;
+        };
+    }
+}
+
+/*================================================
+Index 02 Booking Area CSS
+=================================================*/
+.play-button{
+    position: relative;
+    a{
+        width: 100px;
+        height: 100px;
+        font-size: 60px;
+        border-radius: 50%;
+        padding-top: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--whiteColor);
+        background-color: rgba($color: #ff630e, $alpha: 0.9);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.booking-form-area{
+    background-color: var(--whiteColor);
+    padding: {
+        left: 50px;
+        right: 50px;
+    };
+    .default-section-title {
+        h3{
+            line-height: 1;
+        }
+    }
+    .booking-form-content{
+        margin-top: 20px;
+        border-radius: 10px;
+        .form-control,.form-select{
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9fafb;
+            border: 1px solid #eeeeee;
+            color: var(--blackColor);
+            font: {
+                size: var(--fontSize);
+                family: var(--fontFamily2);
+            };
+            &::after{
+                display: none;
+            }
+        }
+        .default-button{
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .current{
+            color: var(--paragraphColor);
+        }
+    }
+}
+.booking-2{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/booking-bg.jpg');
+}
+
+/*================================================
+Index 02 FAQ Area CSS
+=================================================*/
+.accordion-item{
+    margin-top: 20px;
+    border: 0;
+}
+.accordion-button{
+    border: 1px solid #eeeeee20 !important;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 15px 15px 15px 60px;
+    background-color: var(--whiteColor) !important;
+    color: var(--blackColor) !important;
+    box-shadow: var(--boxShadow);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    &::after{
+        display: none;
+    }
+    &:not(.collapsed){
+        span{
+            background-color: var(--mainColor);
+            &::before{
+                content: '-';
+                transform: rotateZ(180deg);
+                transform-origin: center !important;
+            }
+        }
+    }
+}
+.accordion-button[aria-expanded="false"]{
+    span{
+        background-color: var(--blackColor);
+        &::before{
+            content: '+';
+        }
+    }
+}
+.accordion-header{
+    position: relative;
+    span{
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        height: 100%;
+        transition: .5s ease-in-out;
+        background-color: var(--blackColor);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &::before{
+            content: '+';
+            width: 25px;
+            height: 25px;
+            line-height: 1.2;
+            text-align: center;
+            border: 1px solid #eeeeee;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 50%;
+            color: var(--whiteColor);
+            transition: .5s ease-in-out;
+            transform-origin: center !important;
+        }
+    }
+    
+}
+.accordion-collapse{
+    border: 0px;
+}
+.accordion-body{
+    border: 0px;
+    line-height: 1.8;
+    box-shadow: var(--boxShadow);
+    color: var(--paragraphColor);
+    background-color: var(--whiteColor);
+}
+.faq-img-area{
+    position: relative;
+    border-radius: 25% 0px 25% 0px;
+    background-image: linear-gradient(to top, #ff6613, #fdc9ac);
+    .about-text-2{
+        position: absolute;
+        text-align: center;
+        border-radius: 25% 0px 25% 0px;
+        padding: 15px 30px;
+        background-color: var(--whiteColor);
+        border: 1px solid #cccccc;
+        display: inline-block;
+        right: -30px;
+        bottom: 20%;
+        h2{
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: var(--blackColor);
+        }
+    }
+}
+
+/*================================================
+Index 03 Banner Area CSS
+=================================================*/
+.banner-text-area-3{
+    h6{
+        color: var(--mainColor);
+    }
+    .default-button{
+        border-color: var(--mainColor);
+        background-color: var(--mainColor);
+        &:hover{
+            border-color: var(--blackColor);
+            &::before,&::after{
+                background-color: var(--blackColor);
+            }
+        }
+    }
+}
+.banner{
+    overflow: hidden;
+    position: relative;
+    .black-line{
+        position: absolute;
+        left: 45%;
+        top: 10px;
+        animation: top-bottom 2s infinite linear;
+    }
+    .orange-line{
+        position: absolute;
+        right: 0;
+        top: 0px;
+        animation: top-bottom 2s infinite linear;
+    }
+    .half-circle{
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+        animation: half-spin 15s infinite linear;
+    }
+}
+.banner-img-area{
+    position: relative;
+    margin-right: 100px;
+    .main-img{
+        width: 100%;
+    }
+    .shapes{
+        .b3-dot{
+            position: absolute;
+            bottom: 20%;
+            left: -75px;
+            animation: half-spin 15s infinite linear;
+        }
+        .dot-circle{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+/*================================================
+Index 03 About Area CSS
+=================================================*/
+.about-img-area-3{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/about/a3.jpg');
+    height: 100%;
+    position: relative;
+    img{
+        display: none;
+    }
+    &::before{
+        content: '';
+        width: 100px;
+        height: 100%;
+        background-color: var(--whiteColor);
+        position: absolute;
+        right: 0;
+    }
+}
+.about-img-list{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/about/about-3-text-bg.jpg');
+    display: inline-block;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            padding: 10px;
+            border-bottom: 1px solid #ffffff;
+            color: rgba($color: #ffffff, $alpha: 0.8);
+            font: {
+                size: 20px;
+                family: var(--fontFamily2);
+            };
+            strong{
+                color: var(--fix-whiteColor);
+                font-size: 30px;
+            }
+            &:first-child{
+                padding-top: 0px;
+                margin-top: -15px;
+            }
+        }
+    }
+}
+
+/*================================================
+Index 03 Features Area CSS
+=================================================*/
+.features-card-3{
+    position: relative;
+    margin-top: 30px;
+    padding-left: 90px;
+    max-width: 300px;
+    i{
+        width: 70px;
+        height: 70px;
+        font-size: 35px;
+        border-radius: 50%;
+        transition: .5s ease-in-out;
+        color: var(--blackColor);
+        border: 3px dashed var(--blackColor);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+    }
+    h4{
+        margin-bottom: 12px;
+        color: var(--blackColor);
+        font: {
+            size: 20px;
+            weight: 700;
+        };
+    }
+    &:hover{
+        i{
+            color: var(--mainColor);
+            border-color: var(--mainColor);
+        }
+    }
+}
+
+/*================================================
+Index 03 Service Area CSS
+=================================================*/
+.service-card-3{
+    margin-top: 30px;
+    overflow: hidden;
+    background-color: var(--whiteColor);
+    .service-card-text-3{
+        padding: 30px 30px 25px 30px;
+        position: relative;
+        i{
+            font-size: 100px;
+            transition: .5s ease-in-out;
+            color: rgba($color: #000000, $alpha: 0.1);
+            position: absolute;
+            bottom: -25px;
+            right: 10px;
+        }
+        h4{
+            margin-bottom: 15px;
+            font: {
+                size: var(--card-title-fontSize);
+                weight: 600;
+            };
+        }
+    }
+    &:hover{
+        i{
+            color: rgba($color: #ff630e, $alpha: 0.2);
+        }
+    }
+}
+
+/*================================================
+Index 03 Why Choose Us Area CSS
+=================================================*/
+.why-we-card-3{
+    padding: 30px 30px 25px 100px;
+    background-color: #f9fafb;
+    position: relative;
+    margin-top: 30px;
+    i{
+        font-size: 50px;
+        color: var(--mainColor);
+        position: absolute;
+        left: 30px;
+        top: 28px;
+    }
+    h4{
+        color: var(--blackColor);
+        font: {
+            size: var(--card-title-fontSize);
+            weight: 600;
+        };
+    }
+}
+
+/*================================================
+Index 03 Booking Area CSS
+=================================================*/
+.booking-3{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/booking-3-bg.jpg');
+    position: relative;
+    &::before{
+        content: '';
+        width: 32%;
+        height: 100%;
+        background-color: var(--whiteColor);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+}
+.booking-form-area-3{
+    background-color: var(--mainColor);
+    padding: 0px;
+    position: relative;
+    .booking-form-content-3{
+        padding: 50px;
+        margin: {
+            top: 100px;
+            bottom: 100px;
+        };
+        .default-section-title {
+            h3{
+                color: var(--fix-whiteColor);
+            }
+        }
+        .booking-form-content {
+            .default-button{
+                border: 1px solid var(--blackColor) !important;
+            }
+        }
+    }
+}
+
+/*================================================
+Index 03 Testimonial Area CSS
+=================================================*/
+.testimonial-card-3{
+    padding: {
+        top: 0px;
+        bottom: 25px;
+    };
+    border-radius: 0px;
+    position: relative;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 35px;
+        background-color: var(--whiteColor);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .testimonial-footer{
+        display: block;
+        position: relative;
+        .testimonial-footer-intro{
+            margin: {
+                top: 20px;
+                bottom: 15px;
+            };
+        }
+    }
+    &:hover{
+        background-color: #f9fafb;
+        box-shadow: none;
+    }
+}
+
+.blog-card-3{
+    border-radius: 0px;
+    .blog-card-img{
+        img{
+            border-radius: 0px;
+        }
+    }
+}
+
+/*================================================
+Index 03 Newsletter Area CSS
+=================================================*/
+.newsletter-content-area-3{
+    border-radius: 0px;
+    background-image: unset;
+    background-color: #f9fafb;
+    .news-input-card {
+        .form-control, .form-select{
+            border-radius: 0px;
+        }
+        .default-button{
+            border-radius: 0px;
+        }
+    }
+}
+
+
+.features-bg-4{
+    padding-bottom: 100px;
+}
+.about-team {
+    .team-card{
+        box-shadow: var(--boxShadow);
+    }
+}
+
+/*================================================
+Uni Banner Area CSS
+=================================================*/
+.uni-banner{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/inner-images/uni-banner-bg.jpg');
+    position: relative;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.uni-banner-text{
+    position: relative;
+    text-align: center;
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    };
+    h1{
+        color: var(--fix-whiteColor);
+        margin-bottom: 15px;
+        font: {
+            size: 60px;
+            weight: 900;
+        };
+    }
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-block;
+            color: var(--mainColor);
+            position: relative;
+            margin-right: 20px;
+            font: {
+                size: var(--fontSize);
+                family: var(--fontFamily2);
+            };
+            a{
+                color: var(--fix-whiteColor);
+            }
+            &::after{
+                content: '/';
+                font-size: 20px;
+                position: absolute;
+                right: -18px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.pag-btn{
+    display: table;
+    margin: {
+        top: 40px;
+        left: auto;
+        right: auto;
+    };
+}
+
+/*================================================ 
+Log In Page CSS
+=================================================*/
+.login-form{
+    margin-top: 20px;
+    form{
+        label{
+            color: var(--paragraphColor);
+            font: {
+                family: var(--fontFamily);
+                size: var(--fontSize);
+                weight: 400;
+            };
+        }
+        .form-control{
+            border: 1px solid #eeeeee;
+        }
+        .form-check{
+            label{
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+        .default-button{
+            width: 100%;
+        }
+    }
+    p{
+        font-size: 14px;
+        font-style: italic;
+    }
+}
+
+.form-check-input:checked{
+    border-color: var(--mainColor);
+    background-color: var(--mainColor);
+}
+
+/*================================================
+Error Area CSS
+=================================================*/
+.error{
+    border-top: 1px solid #eeeeee;
+}
+.error-content{
+    margin-top: 30px;
+    p{
+        margin: {
+            top: 20px;
+            bottom: 20px
+        };
+    }
+    h1{
+        margin: 10px 0px;
+        line-height: 1;
+        display: inline-block;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right, #FF2626, #BD1616, #FF2626);
+        font: {
+            size: 100px;
+            weight: 700;
+        };
+    }
+}
+
+/*================================================
+Terms & Privacy area CSS
+=================================================*/
+.terms{
+    margin-bottom: -15px;
+    strong{
+        color: var(--blackColor);
+    }
+    a{
+        color: var(--mainColor);
+    }
+    h1,h2,h3,h4,h5{
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-family: var(--fontFamily);
+        font-weight: 600;
+        color: var(--blackColor);
+    }
+    h6{
+        font-size: 20px;
+        font-weight: 600;
+        font-family: var(--fontFamily);
+        color: var(--blackColor);
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 26px;
+    }
+    h4{
+        font-size: 24px;
+    }
+    h5{
+        font-size: 22px;
+    }
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            margin: 10px 0px;
+            font-size: var(--fontSize);
+            color: var(--paragraphColor);
+            font-family: var(--fontFamily2);
+            span{
+                font-weight: 700;
+                margin-right: 8px;
+                color: var(--blackColor);
+            }
+        }
+    }
+    .payment{
+        li{
+            position: relative;
+            padding-left: 20px;
+            &::before{
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: var(--mainColor);
+                position: absolute;
+                left: 0;
+                top: 6px;
+                
+            }
+        }
+    }
+}
+
+/*================================================
+Service 02 PAge area CSS
+=================================================*/
+.service-4{
+    .service-card-3{
+        box-shadow: var(--boxShadow);
+    }
+}
+/*================================================
+Details Text area CSS
+=================================================*/
+.details-text-area{
+    .details-page-img{
+        margin-bottom: 30px;
+        img{
+            border-radius: 25px;
+        }
+    }
+    h3{
+        font-size: var(--card-title-fontSize);
+        color: var(--blackColor);
+        font-weight: 600;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+}
+.details-list{
+    li{
+        color: var(--paragraphColor);
+        margin: 15px 0px;
+        color: var(--blackColor);
+        font: {
+            size: var(--fontSize);
+            family: var(--fontFamily2);
+        };
+        i{
+            color: var(--mainColor);
+            margin-right: 5px;
+        }
+    }
+}
+.sd-img-area{
+    img{
+        border-radius: 25px;
+        margin: {
+            top: 10px;
+            bottom: 25px;
+        };
+    }
+}
+
+/*================================================
+Details page Common Area CSS
+=================================================*/
+.sidebar-card{
+    background-color: var(--whiteColor);
+    box-shadow: var(--boxShadow);
+    border-radius: 25px;
+    padding: 30px;
+    h3{
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        color: var(--blackColor);
+        border-bottom: 1px dashed var(--mainColor);
+        font: {
+            size: var(--card-title-fontSize);
+            weight: 700;
+        };
+    }
+}
+.search-box{
+    .input-group{
+        border-radius: 25px;
+        border: 1px solid #eeeeee;
+    }
+    .form-control{
+        background-color: var(--whiteColor);
+        border: 0px;
+        padding: 10px;
+        border-radius: 25px;
+    }
+    .btn{
+        border-radius: 25px !important;
+        color: var(--whiteColor);
+        transition: .5s ease-in-out;
+        background-color: var(--mainColor);
+        &:hover{
+            background-color: var(--blackColor);
+        }
+    }
+}
+.categories{
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            margin-top: 10px;
+            font: {
+                size: var(--fontSize);
+                family: var(--fontFamily2);
+                weight: 500;
+            };
+            i{
+                margin-right: 5px;
+                color: var(--mainColor);
+            }
+            .active{
+                color: var(--mainColor);
+            }
+        }
+    }
+}
+.calculate-area{
+    form{
+        margin-top: 25px;
+        .form-control,.form-select{
+            padding: 15px;
+            margin: 10px 0px;
+            border-radius: 25px;
+            
+            border: 1px solid #eeeeee;
+            color: var(--blackColor);
+            font: {
+                size: var(--fontSize);
+                family: var(--fontFamily2);
+            };
+            &::after{
+                display: none;
+            }
+        }
+        .default-button{
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .current{
+            color: var(--paragraphColor);
+        }
+    }
+}
+.opening-card{
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+            color: var(--paragraphColor);
+            span{
+                font: {
+                    size: var(--fontSize);
+                    family: var(--fontFamily2);
+                };
+            }
+        }
+    }
+}
+.recent-news,.sd-tag{
+    margin-top: 30px;
+}
+.recent-news-card{
+    margin-top: 20px;
+    min-height: 90px;
+    position: relative;
+    padding-left: 105px;
+    img{
+        position: absolute;
+        border-radius: 50%;
+        left: 0;
+    }
+    h5{
+        line-height: 1.4;
+        margin-bottom: 10px;
+        font: {
+            weight: 700;
+            size: var(--fontSize);
+        };
+    }
+    p{
+        font-size: 14px;
+
+    }
+}
+.sd-tag{
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 5px;
+            font-weight: 500;
+            a{
+                font-size: 13px;
+                padding: 5px 15px 7px;
+                border-radius: 15px;
+                border: 1px solid #eeeeee;
+                display: inline-block;
+                background-color: var(--whiteColor);
+            }
+            &:last-child{
+                margin-right: 0px;
+            }
+        }
+    }
+}
+.pagination{
+    margin-top: 30px;
+    text-align: center;
+    display: inherit;
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-block;
+            a{
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: .5s ease;
+                border: 1px solid var(--mainColor);
+                margin: 0px 3px;
+                font: {
+                    size: 15px;
+                    weight: 700;
+                    family: var(--fontFamily);
+                };
+                &:hover{
+                    color: var(--whiteColor);
+                    background-color: var(--mainColor);
+                }
+            }
+        }
+        .active{
+            a{
+                color: var(--whiteColor);
+                background-color: var(--mainColor);
+            }
+        }
+    }
+}
+
+/*================================================
+Blog Details area CSS
+=================================================*/
+.blog-quote{
+    background-color: #f9faff;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 25px;
+    p{
+        color: var(--blackColor);
+        text-transform: capitalize;
+        font: {
+            size: 16px;
+            weight: 600;
+        };
+    }
+    h5{
+        margin-bottom: 0px;
+        font: {
+            size: 16px;
+            weight: 500;
+        };
+        i{
+            color: var(--mainColor);
+            margin-right: 15px;
+        }
+        span{
+            color: var(--paragraphColor);
+        }
+    }
+}
+.blog-text-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 3px 15px 15px 15px;
+    background-color: #f9fafb;
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            display: inline-block;
+            span{
+                font-weight: 600;
+                margin-right: 10px;
+                padding: 0px !important;
+                color: var(--blackColor);
+                background-color: transparent !important;
+            }
+        }
+    }
+    .tag-area{
+        margin-top: 12px;
+        ul{
+            li{
+                margin-right: 5px;
+                cursor: pointer;
+                color: var(--blackColor);
+                font: {
+                    size: var(--fontSize);
+                    family: var(--fontFamily2);
+                };
+                i{
+                    color: var(--mainColor);
+                }
+                &:hover{
+                    transition: .5s ease-in-out;
+                    color: var(--mainColor);
+                }
+                &:first-child{
+                    padding: 0px;
+                }
+            }
+        }
+    }
+    .social-icons{
+        margin-top: 12px;
+        ul{
+            li{
+                a{  
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 1px dashed var(--mainColor);
+                    color: var(--mainColor);
+                    background-color: var(--whiteColor);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:hover{
+                        color: var(--whiteColor);
+                        background-color: var(--mainColor);
+                    }
+                }
+            }
+        }
+    }
+}
+.bd-comments{
+    margin-top: 30px;
+    h3{
+        font-size: var(--card-title-fontSize);
+    }
+}
+.comment-card{
+    margin-top: 30px;
+    position: relative;
+    padding-left: 100px;
+    img{
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+    }
+    h5{
+        margin-bottom: 0px;
+        color: var(--blackColor);
+        font: {
+            weight: 600;
+            size: var(--fontSize);
+        };
+    }
+    span{
+        color: var(--paragraphColor);
+        margin-bottom: 10px;
+        font: {
+            weight: 400;
+            size: 14px;
+            family: var(--fontFamily);
+        };
+    }
+    p{
+        margin: {
+            top: 10px;
+            bottom: 10px;
+        };
+    }
+    a{
+        color: var(--mainColor);
+        font-weight: 500;
+    }
+}
+.bd-form{
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 25px;
+    h3{
+        font-size: var(--card-title-fontSize);
+    }
+    .form-group {
+        margin-bottom: 30px;
+    }
+    .form-control{
+        border: 0px;
+        padding: 12px 15px;
+        border-radius: 25px;
+        background-color: var(--whiteColor);
+    }
+    .list-unstyled {
+        font-size: 14px;
+        color: #ff0000;
+        margin-top: 8px;
+    }
+    #msgSubmit {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+}
+.blog-with-sidebar{
+    .blog-card{
+        img{
+            width: 100%;
+        }
+        margin: {
+            top: 0px;
+            bottom: 30px;
+        };
+    }
+}
+.blog-details-text-area{
+    .blog-card{
+        .blog-card-img {
+            img{
+                transform: rotate(0);
+            }
+        }
+    }
+}
+
+/*================================================
+Contact page area CSS
+=================================================*/
+.contact-card{
+    position: relative;
+    border-radius: 20px;
+    padding: 25px 30px 25px 105px;
+    margin-top: 30px;
+    box-shadow: var(--boxShadow);
+    i{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 30px;
+        color: var(--mainColor);
+        border: 1px dashed var(--mainColor);
+        transition: .5s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 30px;
+    }
+    h4{
+        margin-bottom: 5px;
+        color: var(--blackColor);
+        font: {
+            size: var(--card-title-fontSize);
+            weight: 600;
+        };
+    }
+    p{
+        margin-bottom: 0px;
+        a{
+            color: var(--paragraphColor);
+        }
+    }
+    &:hover{
+        i{
+            color: var(--fix-whiteColor);
+            background-color: var(--mainColor);
+        }
+    }
+}
+.contact-page-form-area{
+    box-shadow: var(--boxShadow);
+    border-radius: 25px;
+    .bd-form {
+        h3{
+            margin-top: 0px;
+        }
+        .form-control{
+            background-color: #f9fafb;
+        }
+    }
+}
+
+.google-map{
+    width: 100%;
+    height: 400px;
+    .g-map{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/*================================================
+Animation Area CSS
+=================================================*/
+@keyframes top-bottom {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+@keyframes half-spin{
+    0%{
+        transform: rotate(0);
+        transform-origin: center;
+    }
+    50%{
+        transform: rotate(90deg);
+        transform-origin: center;
+    }
+}
+
+@keyframes video-play{
+    0%{
+        width: 50%;;
+        height: 50%;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+    }
+}

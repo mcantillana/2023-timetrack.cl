@@ -1,0 +1,207 @@
+.theme-switcher {
+    position: fixed;
+    z-index: 999999;
+    bottom: 30px;
+    right: 80px;
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 34px;
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        &::before {
+            position: absolute;
+            content: "";
+            height: 30px;
+            width: 30px;
+            left: 0px;
+            bottom: 4px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            box-shadow: 0 0px 15px #2020203d;
+            background: white url('https://i.ibb.co/FxzBYR9/night.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    input:checked + .slider {
+        background-color: #111111;
+    }
+    
+    input:focus + .slider {
+        box-shadow: 0 0 1px #111111;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(24px);
+        -ms-transform: translateX(24px);
+        transform: translateX(18px);
+        background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round {
+        &::before {
+            border-radius: 50%;
+        }
+    }
+
+}
+.theme-light {
+    --whiteColor: #ffffff;
+    --blackColor: #242424;
+    --secondColor: #2e2f46;
+    --paragraphColor: #666666;
+
+    .white-logo {
+        display: none;
+    }
+    .black-logo {
+        display: block;
+    }
+}
+
+.theme-dark {
+    --whiteColor: #242424;
+    --blackColor: #ffffff;
+    --secondColor: #676cda;
+    --paragraphColor: #d1d1d1;
+    --boxShadow:  rgba(0, 0, 0, 0.1) 0px 0px 16px;
+    .bg-000000 {
+        background-color: #000000;
+    }
+    .bg-f9faff{
+        background-color: #000000;
+    }
+
+    .white-logo {
+        display: block;
+    }
+    .black-logo {
+        display: none;
+    }
+
+    .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+        background-color: #3c3c3c;
+    }
+
+    /*================================================
+    Form Select Area CSS
+    =================================================*/
+    .booking-content .booking-form-content {
+        .form-control, .form-select {
+            background-color: #0a0a0a;
+        }
+    }
+
+    /*================================================
+    Index 01 Banner Area CSS
+    =================================================*/
+    .main-banner-bg {
+        &::before {
+            background-color: rgba($color: #000000, $alpha: 0.9);
+        }
+    }
+
+    /*================================================
+    Index 01 Features Area CSS
+    =================================================*/
+    .features-bg,.shape-bg {
+        position: relative;
+        background-image: unset;
+        background-color: #000000;
+    }
+
+    /*================================================
+    Index 01 Booking Area CSS
+    =================================================*/
+    .booking-content,.newsletter-content-area {
+        background-color: rgba($color: #141414, $alpha: 1);
+        background-image: unset;
+    }
+
+    /*================================================
+    Index 01 Services Area CSS
+    =================================================*/
+    .service-card {
+        .service-card-text {
+            background-color: rgba($color: #000000, $alpha: 0.8);
+            background-image: unset;
+        }
+    }
+
+    /*================================================
+    Index 01 Testimonials Area CSS
+    =================================================*/
+    .testimonial-card {
+        background-color: #2b2c2c;
+    }
+
+    /*================================================
+    Index 01 Newsletter Area CSS
+    =================================================*/
+    .newsletter-1 {
+        &::before {
+            background-color: #000000;
+        }
+    }
+
+    /*================================================
+    Index 02 Booking Area CSS
+    =================================================*/
+    .home-banner-bg ,.home-banner-img{
+        background-color: #000000;
+        background-image: unset;
+    }
+
+    /*================================================
+    Index 03 Why Choose Us Area CSS
+    =================================================*/
+    .why-we-card-3 {
+        background-color: #2a2a2a;
+    }
+
+    /*================================================
+    Uni Banner Area CSS
+    =================================================*/
+    .uni-banner{
+        &::before{
+            background-color: rgba($color: #000000, $alpha: 0.9);
+        }
+    }
+
+    /*================================================
+    Blog Details Area CSS
+    =================================================*/
+    .blog-quote,.blog-text-footer {
+        background-color: #202020;
+    }
+
+    
+}

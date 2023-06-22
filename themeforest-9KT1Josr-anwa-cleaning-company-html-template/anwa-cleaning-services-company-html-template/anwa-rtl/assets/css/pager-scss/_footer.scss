@@ -1,0 +1,274 @@
+.footer-logo-area{
+    p{
+        margin-top: 20px;
+    }
+    .footer-social-icons{
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        span{
+            margin-right: 10px;
+            font: {
+                size: 15px;
+                weight: 600;
+                family: var(--fontFamily2);
+            };
+        }
+        ul{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            li{
+                display: inline-block;
+                a{
+                    width: 30px;
+                    height: 30px;
+                    font-size: 15px;
+                    margin-left: 3px;
+                    border-radius: 50%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--mainColor);
+                    background-color: var(--whiteColor);
+                    box-shadow: var(--boxShadow);
+                    &:hover{
+                        color: var(--fix-whiteColor);
+                        background-color: var(--mainColor);
+                    }
+                }
+            }
+        }
+    }
+}
+.footer-links{
+    h3{
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        font-size: var(--card-title-fontSize);
+        &::before{
+            content: '';
+            height: 2px;
+            width: 20%;
+            background-color: var(--mainColor);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+.footer-contact-list{
+    padding-left: 20px;
+}
+.footer-quick-links{
+    padding-left: 60px;
+}
+.footer-content-card{
+    position: relative;
+    padding-left: 30px;
+    margin-top: 15px;
+    i{
+        width: 20px;
+        font-size: 18px;
+        text-align: center;
+        color: var(--mainColor);
+        position: absolute;
+        left: 0;
+        top: 1px;
+    }
+    h5{
+        margin-bottom: 5px;
+        font: {
+            size: 15px;
+            weight: 600; 
+        };
+    }
+    p{
+        font-size: 14px;
+        a{
+            color: var(--paragraphColor);
+        }
+    }
+}
+
+.footer-quick-links{
+    ul{
+        margin: 0px;
+        padding: 0;
+        list-style: none;
+        li{
+            margin-top: 14px;
+            a{
+                display: inline-block;
+                color: var(--paragraphColor);
+                font: {
+                    size: 14px;
+                    family: var(--fontFamily2);
+                };
+                i{
+                    margin-right: 5px;
+                    color: var(--mainColor);
+                }
+                &:hover{
+                    color: var(--mainColor);
+                }
+            }
+            &:first-child{
+                margin-top: 0px;
+            }
+        }
+    }
+}
+.footer-newsletter{
+    form{
+        .form-control{
+            padding: 10px 15px;
+            border-radius: 25px;
+        }
+        .default-button{
+            width: 100%;
+            margin-top: 15px;
+        }
+    }
+    #validator-newsletter {
+        font-size: 14px;
+        color: #ff0000;
+        margin-top: 8px;
+    }
+}
+
+.footer-2{
+    .footer-logo-area {
+        p{
+            color: #eeeeee;
+        }
+        .footer-social-icons span{
+            color: #eeeeee;
+        }
+    }
+    .footer-links {
+        h3{
+            color: var(--fix-whiteColor);
+        }
+    }
+    .footer-content-card {
+        h5{
+            color: #eeeeee;
+        }
+        a{
+            color: var(--fix-whiteColor);
+            &:hover {
+                color: var(--mainColor);
+            }
+        }
+    }
+    .footer-quick-links ul li a{
+        color: var(--fix-whiteColor);
+        &:hover{
+            color: var(--mainColor);
+        }
+    }
+    .footer-newsletter {
+        p{
+            color: #eeeeee;
+        }
+        .input-group {
+            border: 1px solid #eeeeee70;
+            .form-control{
+                color: var(--whiteColor);
+            }
+            .btn{
+                border-radius: 25px !important;
+                padding: 10px 30px;
+            }
+        }
+    }
+}
+
+/*================================================ 
+CopyRight Area CSS
+=================================================*/
+.copyright {
+    text-align: center;
+    color: var(--whiteColor);
+    position: relative;
+    padding: {
+        top: 0px;
+        bottom: 20px;
+    };
+    .container{
+        border-top: 1px solid #ffffff1e;
+    }
+    p {
+        color: var(--fix-whiteColor);
+        padding-top: 20px;
+        font: {
+            size: 15px;
+        };
+        a {
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--mainColor);
+        }
+        strong{
+            color: var(--fix-whiteColor);
+        }
+    }
+}
+.copyright-2{
+    border-top: 1px solid rgba($color: #eeeeee, $alpha: 0.3);
+    p{
+        color: #eeeeee;
+        a{
+            color: var(--thirdColor);
+        }
+    }
+}
+
+/*================================================
+Go Top CSS
+=================================================*/
+.go-top {
+    position: fixed;
+    cursor: pointer;
+    bottom: 100px;
+    right: 20px;
+    border-radius: 5px;
+    background-color: var(--fix-whiteColor);
+    color: var(--blackColor);
+    z-index: 999;
+    width: 50px;
+    padding: 0 10px 45px;
+    text-align: center;
+    height: 40px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 25px;
+    -webkit-transition: var(--transition);
+    transition: 0.5s;
+    box-shadow: var(--boxShadow);
+    i {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &:hover {
+        color: #ffffff;
+        transition: all 0.5s linear;
+        // background-color: var(--mainColor);
+        border: 1px solid var(--mainColor);
+    }
+}
+.go-top.active {
+        opacity: 1;
+        visibility: visible;
+        bottom: 25px;
+        animation: top-bottom 5s infinite linear;
+}
