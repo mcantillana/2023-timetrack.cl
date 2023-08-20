@@ -74,7 +74,7 @@ Email: hola@timetrack.cl
 - Instagram @timetrackcl
 
 
-
+<p>Marca tu tiempo, nosotros lo registramos.</p>
 
 
 
